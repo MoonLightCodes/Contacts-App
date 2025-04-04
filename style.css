@@ -25,7 +25,7 @@ body {
 .main-container-login {
   /* display: none;  */
   max-width: 400px;
-  min-width: 300px;
+  min-width: 250px;
   margin: 0 auto;
   padding: 20px;
   border: 3px solid rgba(232, 145, 232, 0.922);
@@ -128,7 +128,7 @@ body {
 .register-container {
   display: none;
   max-width: 400px;
-  min-width: 300px;
+  min-width: 250px;
   margin: 0 auto;
   padding: 20px;
   border: 3px solid rgba(232, 145, 232, 0.922);
@@ -141,7 +141,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   max-width: 900px;
-  min-width: 300px;
+  min-width: 250px;
   margin: auto;
   background: linear-gradient(20deg,  #ffff,rgb(247, 93, 247),#fff);
   box-shadow: 4px 4px 100px #e613df;
@@ -191,7 +191,7 @@ body {
   display: none;
   position: relative;
   max-width: 400px;
-  min-width: 300px;
+  min-width: 250px;
   margin: 0 auto;
   padding: 20px;
   border: 3px solid rgba(232, 145, 232, 0.922);
