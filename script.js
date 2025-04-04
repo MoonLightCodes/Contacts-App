@@ -22,7 +22,7 @@ loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = document.getElementById("login-email").value;
   const password = document.getElementById("login-password").value;
-  const res = await fetch("http://localhost:5000/user/login", {
+  const res = await fetch("https://contacts-api-tqhi.onrender.com/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -60,7 +60,7 @@ async function getContacts() {
   cardHolder.innerHTML = "";
   fetchedContacts = [];
   try {
-    const contacts = await fetch("http://localhost:5000/contacts", {
+    const contacts = await fetch("https://contacts-api-tqhi.onrender.com/contacts", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +116,7 @@ registerForm.addEventListener("submit", async (e) => {
   const password = document.getElementById("register-password").value;
 
   try {
-    const res = await fetch("http://localhost:5000/user/register", {
+    const res = await fetch("https://contacts-api-tqhi.onrender.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -170,7 +170,7 @@ createForm.addEventListener("submit", async (e) => {
     const email = document.getElementById("create-email").value;
     const phone = document.getElementById("create-phone").value;
     const name = document.getElementById("create-name").value;
-    const res = await fetch("http://localhost:5000/contacts", {
+    const res = await fetch("https://contacts-api-tqhi.onrender.com/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -217,7 +217,7 @@ cardHolder.addEventListener("click", async (e) => {
     const clickedCard = e.target.closest(".contact-card");
     const contactId = fetchedContacts[parseInt(clickedCard.dataset.ind)]._id;
     try {
-      const res = await fetch(`http://localhost:5000/contacts/${contactId}`, {
+      const res = await fetch(`https://contacts-api-tqhi.onrender.com/contacts/${contactId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -276,7 +276,7 @@ editForm.addEventListener("submit", async (e) => {
     const phone = document.getElementById("edit-phone").value;
     const name = document.getElementById("edit-name").value;
     const res = await fetch(
-      `http://localhost:5000/contacts/${fetchedContacts[activeEditContactInd]._id}`,
+      `https://contacts-api-tqhi.onrender.com/contacts/${fetchedContacts[activeEditContactInd]._id}`,
       {
         method: "PUT",
         headers: {
