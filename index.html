@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContactsApps</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1 class="app-heading">Contacts App</h1>
+    <div id="root" class="root">
+      <div id="main-container" class="main-container-login">
+        <h1 class="container-heading">Log In</h1>
+        <form id="login-form" class="login-form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Email"
+              id="login-email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="login-password"
+              required
+            />
+          </div>
+          <button
+            class="submit-btn"
+            type="submit"
+            style="display: block; margin: auto"
+          >
+            Log In
+          </button>
+        </form>
+        <div id="register-on-log" onclick="registerOnLogin()">
+          Register Now !
+        </div>
+        <div class="res-message">created succesfully</div>
+      </div>
+
+      <div id="register-container" class="register-container">
+        <h1 class="container-heading">New user Registration</h1>
+        <form id="register-form" class="register form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter Username"
+              id="register-username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Email"
+              id="register-email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+              id="register-password"
+              required
+            />
+          </div>
+          <button
+            class="submit-btn"
+            type="submit"
+            style="display: block; margin: auto"
+          >
+            Sign Up
+          </button>
+        </form>
+        <div id="register-on-log" onclick=" logInOnRegister()">Login Now !</div>
+        <div class="res-message">created succesfully</div>
+      </div>
+      <div id="contacts-container" class="contacts-container">
+        <button id="add-contact" class="add-contact">
+          <i class="fa fa-user-plus"></i>
+          <p style="margin-top: 3px">Add Contact</p>
+        </button>
+        <div id="contacts-holder" class="contacts-holders">
+          <div class="contact-card">
+            <div class="info">
+              <h3>Poorna</h3>
+              <h4>Email: poorna@gmail.com</h4>
+              <h4>Phone: 987654321</h4>
+            </div>
+
+            <div class="options">
+              <div class="options-delete"><i class="fa fa-trash"></i></div>
+              <div class="options-edit"><i class="fas fa-pen"></i></div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="info">
+              <h3>Poorna</h3>
+              <h4>Email: poorna@gmail.com</h4>
+              <h4>Phone: 987654321</h4>
+            </div>
+
+            <div  class="options">
+              <div class="options-delete"><i class="fa fa-trash"></i></div>
+              <div class="options-edit"><i class="fas fa-pen"></i></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div id="create-contact" class="create-contact">
+        <h2 class="container-heading">Create contact</h2>
+        <div class="back"><i class="fa fa-arrow-left"></i></div>
+        <form id="create-contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Email"
+              id="create-email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter name"
+              id="create-name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              name="phone"
+              placeholder="Enter phone number"
+              id="create-phone"
+              required
+            />
+          </div>
+          <button
+            class="submit-btn"
+            type="submit"
+            style="display: block; margin: auto"
+          >
+            Save
+          </button>
+        </form>
+        <div class="res-message">created succesfully</div>
+      </div>
+      <div id="edit-contact" class="edit-contact">
+        <div class="back"><i class="fa fa-arrow-left"></i></div>
+        <h2 class="container-heading">Edit contact</h2>
+        <form id="edit-contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Email"
+              id="edit-email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter name"
+              id="edit-name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              name="phone"
+              placeholder="Enter phone number"
+              id="edit-phone"
+              required
+            />
+          </div>
+          <button
+            class="submit-btn"
+            type="submit"
+            style="display: block; margin: auto"
+          >
+            Save
+          </button>
+        </form>
+        <div class="res-message">created succesfully</div>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
