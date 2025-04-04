@@ -20,7 +20,7 @@ let fetchedContacts = [];
 
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const email = document.getElementById("login-email").value;
+  const email = document.getElementById("login-email").value.toLowerCase();
   const password = document.getElementById("login-password").value;
   const res = await fetch("https://contacts-api-tqhi.onrender.com/user/login", {
     method: "POST",
@@ -111,7 +111,7 @@ function registerOnLogin() {
 
 registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const email = document.getElementById("register-email").value;
+  const email = document.getElementById("register-email").value.toLowerCase();
   const username = document.getElementById("register-username").value;
   const password = document.getElementById("register-password").value;
 
